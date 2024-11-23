@@ -1,21 +1,14 @@
 /*서체 별 유니코드 지정하기*/
 /*영어, 숫자, 특수문자는 헵타*/
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600&display=swap');
+
 @font-face {
-    font-family: "Hepta Slab", serif;
-    src: url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
-    font-optical-sizing: auto;
-    font-weight: 500, 400, 600;
-    font-style: normal;
-    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+  font-family: "Pretendard Variable";
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
 }
-/*한글은 프리텐다드*/
-@font-face {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
-    font-weight: 500, 400, 700;
-    font-style: normal;
-    unicode-range: U+AC00-D7A3;
-}
+
 
 
 body{font-size: calc(0.5vw + 0.5rem);
