@@ -71,7 +71,7 @@ nav a{margin-left: 10px;}
 	background-size: 16px 16px; 
     width: 100vw;
     height: 100vh;
-    background-image: url("../resource/bg_main.png");
+    background-image: url("resource/bg_main.png");
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
