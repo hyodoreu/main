@@ -60,9 +60,9 @@ archive.addEventListener('mouseleave', () => {
 
 //------------------------화살표 누르면 사람과 배경이 바뀌게------------------//
 let main_pp = document.getElementById("main_p1");
-let track_pp = ["../resource/pp_ux.gif", "../resource/pp_cx.gif", "../resource/pp_ed.gif", "../resource/pp_il.gif", "../resource/pp_id.gif", "../resource/pp_vd.gif"];
+let track_pp = ["resource/pp_ux.gif", "resource/pp_cx.gif", "resource/pp_ed.gif", "resource/pp_il.gif", "resource/pp_id.gif", "resource/pp_vd.gif"];
 let main_bg = document.getElementById("main_b1");
-let track_bg = ["../resource/bg_ux.gif", "../resource/bg_cx.gif", "../resource/bg_ed.gif", "../resource/bg_il.gif", "../resource/bg_id.gif", "../resource/bg_vd.gif"];
+let track_bg = ["resource/bg_ux.gif", "resource/bg_cx.gif", "resource/bg_ed.gif", "resource/bg_il.gif", "resource/bg_id.gif", "resource/bg_vd.gif"];
 
 let i = 0;
 let currentPage = 'UX';  // 기본 페이지를 UX로 설정
@@ -123,7 +123,7 @@ function getPromptPath(page) {
 
     let selectedFiles = promptFiles[page] || []; // Get the prompts for the specified page
     return selectedFiles.map(file => ({
-        path: `../resource/prompt/${page}/${file}.svg`,
+        path: `resource/prompt/${page}/${file}.svg`,
         file: file
     }));
 }
