@@ -171,7 +171,7 @@ transform: translateY(40px);
       #main_b1{ position: relative; top: 20vh;}
       
       
-      .zone{position: fixed; width: 80%; left: 5%; height: 55%; top: 25%;}
+      .zone{position: fixed; width: 80%; left: 5%; height: auto; top: 25%;}
       .prompt{height: calc(1.5vw + 1.2rem);}
       .logo_white{
           height: 74vh; 
