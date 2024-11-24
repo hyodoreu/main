@@ -1,46 +1,279 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="../resource/favi.png" type="image/png">
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="color-scheme" content="light only"/>
 	<meta name="supported-color-schemes" content="light"/>
     <title>find Me!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+         body{font-size: calc(0.5vw + 0.5rem);
+            line-height: 150%;
+            font-family: 'Hepta Slab', 'Pretendard Variable';
+        word-break: keep-all;
+        margin: 0;
+        overscroll-behavior: none;
+        background: conic-gradient(#fff 25%, #ddd 25% 50%, 
+                #fff 50% 75%, #ddd 75%);
+            background-size: 16px 16px; 
+            background-attachment: fixed;
+        }
+        
+        body ::selection {
+            background-color: #000000;
+            color: #E0FC61;
+            }
+        body::-webkit-scrollbar {
+            display: none;}
+        body::-webkit-scrollbar {
+            display: none;} /* for Chrome, Safari, and Opera */
+        :root {
+            color-scheme: light only;
+          }
+        
+          
+        nav{position: fixed; text-align: right;
+          right: 0; top: 0;
+        margin-top: 30px;
+        margin-right: 2.5vw;
+        font-family: "Hepta Slab", serif;     
+        font-weight: 500;
+        font-size: 3em;
+        z-index: 100;
+        letter-spacing :-0.02em;
+        display: flex;}
+        
+        a{text-decoration: none; color: #000000;}
+        nav a{margin-left: 10px;}
+        #about{width: 4em;}
+        #project{width: 4.05em;}
+        #designer{width: 4.9em;}
+        #archive{width: 4.3em;}
+        
+        
+        
+        
+        
+        .background{
+            background: conic-gradient(#fff 25%, #ddd 25% 50%, 
+                #fff 50% 75%, #ddd 75%);
+            background-size: 16px 16px; 
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../resource/bg_main.png");
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+            position: absolute; 
+            display: flex;
+            align-items: center;
+            justify-items: center;
+        }
+        .backyard { position: fixed; width: 100vw; transform: translateY(-180px);}
+        #main_b1{ position: relative; top: 20vh;}
+        
+        
+        .zone{position: fixed; width: calc(100vw - 400px); left: 200px; height: calc(100vh - 100px - 3em);}
+        .prompt{height: calc(1vw + 1rem);}
+        .logo_white{
+            height: 74vh; 
+            width: 70vh;
+            left: calc(50vw - 35vh);
+            top: 3vh; 
+            align-content: center;
+            position: absolute;
+            user-select: none;
+        }
+        .logo{
+            height: 74vh; 
+            width: 70vh;
+            align-content: center;
+            position: absolute;
+            background-size: cover;
+        }
+        
+        .people{position: relative;
+            height: 50vh;
+            overflow: hidden;
+            left: 9vh; 
+            top:7.5vh; 
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        transform: translateY(40px);
+        }
+        
+        #main_p1{height: -webkit-fill-available;}
+        .arrow{ position:absolute; width: 130px; height: 100px; top: calc(50vh - 50px);}
+        .right{ right: 50px; display: flex; align-items: center; justify-content: end;}
+        .left{ left: 50px;display: flex; align-items: center; justify-content: left;}
+        
+        
+        .footerback{
+            box-sizing: border-box;
+            padding-left: 2.5vw;
+            padding-right: 2.5vw;
+            position: absolute;
+            top: 100vh;
+            height: 100px;
+            width: 100vw;
+            background: white;
+            color:#ABACAD;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;}
+        .logo_footer{ height: 65px;  display: flex; align-items: center;}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*----------모바일----------*/ 
+        
+        @media (max-width: 768px) and (orientation: portrait) {
+            nav{position: fixed; 
+                text-align: right;
+                right: 0; top: 0;
+            width: 100%;
+              margin-top: 10px;
+              margin-right: auto; 
+              font-size: 3.5em;
+              z-index: 100;
+              letter-spacing :-0.02em;
+              display: flex;
+              flex-direction: column;
+              align-items: center
+            }
+              nav a {margin-top: 1rem; right: 0; height: 30px;}
+              a{text-decoration: none; color: #000000;}
+              #about{width: 3.5em;}
+              #project{width: 4.05em;}
+              #designer{width: 4.9em;}
+              #archive{width: 4.3em;}
+              
+              
+              
+            
+              .backyard { position: fixed; 
+                width: 180vw; transform: translateX(-40vw) translateY(-180px);}
+              #main_b1{ position: relative; top: 20vh;}
+              
+              
+              .zone{position: fixed; width: 80%; left: 5%; height: auto; top: 25%;}
+              .prompt{height: calc(1.5vw + 1.2rem);}
+              .logo_white{
+                  width: 70vh;
+                
+                  align-content: center;
+                  position: absolute;
+                  user-select: none;
+              }
+              .logo{
+                  width: 30vh;
+                  align-content: center;
+                  position: absolute;
+                  background-size: cover;
+                  display: none;
+              }
+              
+              .people{position: relative;
+                  height: 50vh;
+                  overflow: hidden;
+                  left:-11vh; 
+                  top: 5vh; 
+              user-select: none;
+              display: flex;
+              align-items: center;
+              justify-items: center;
+              transform: translateY(40px);
+              }
+              
+              #main_p1{height: -webkit-fill-available;}
+              .arrow{ position:absolute; width: 65px; height: 50px; top: calc(50vh - 50px);}
+              .right{ right: 16px; display: flex; align-items: center; justify-content: end;}
+              .left{ left: 16px;display: flex; align-items: center; justify-content: left;}
+              
+             
+        
+              .footerback{
+                box-sizing: border-box;
+                padding-left: 4.5vw;
+                padding-right: 4.5vw;
+                top: calc(100vh - 100px);
+                height: 100px;
+                width: 100vw;
+                background: white;
+                color:#ABACAD;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+                position: fixed;
+            }
+            .logo_footer{ width: 25%; height: 65px;  display: flex; align-items: center; transform: scale(0.7);}
+        
+            .backyard, .people, .zone {
+    position: absolute; /* 절대 위치 지정 */
+    top: 50%; /* 세로 중앙 */
+    left: 50%; /* 가로 중앙 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+.zone {
+    width: 80%; /* 너비 조정 */
+    height: auto; /* 필요에 따라 조정 */
+}
+
+
+
+   
+         
+          }
+    </style>
 </head>
 <body>
     <nav> 
-        <a id="about" href="about/about.html">About, </a>
-        <a id="project" href="project/project.html">Project, </a>
-        <a id="designer" href="designer/designer.html">Designer, </a>
-        <a id="archive" href="archive/archive.html">Archive. </a>
+        <a id="about" href="../about/about.html">About, </a>
+        <a id="project" href="../project/project.html">Project, </a>
+        <a id="designer" href="../designer/designer.html">Designer, </a>
+        <a id="archive" href="../archive/archive.html">Archive. </a>
     </nav>
 
 
     <section class="background" id="ex1">
         <div class="backyard">
-            <!-- <video loop muted autoplay playsinline style="width: 100%;" src="resource/cxbg.webm" id="main_b1"> </video> -->
-            <img style="width: 100%;" src="resource/bg_ux.gif" id="main_b1">
+            <!-- <video loop muted autoplay playsinline style="width: 100%;" src="../resource/cxbg.webm" id="main_b1"> </video> -->
+            <img style="width: 100%;" src="../resource/bg_ux.gif" id="main_b1">
         </div>
         
         <div class="logo_white">
             <!-- <div class="mask"></div>     -->
-            <img class="logo" id="ex1-layer" src="resource/logo_white.svg">
+            <img class="logo" id="ex1-layer" src="../resource/logo_white.svg">
             <div class="people">
-                <img src="resource/pp_ux.gif" id="main_p1">
+                <img src="../resource/pp_ux.gif" id="main_p1">
             </div>
         </div>
         <div class="zone"></div>
-        <div class="arrow left" id="arrow_left" onclick="left()"><img src="resource/arrow_left.svg"></div>
-        <div class="arrow right" id="arrow_right" onclick="right()"><img src="resource/arrow_right.svg"></div>
+        <div class="arrow left" id="arrow_left" onclick="left()"><img src="../resource/arrow_left.svg"></div>
+        <div class="arrow right" id="arrow_right" onclick="right()"><img src="../resource/arrow_right.svg"></div>
     </section>
     <footer class="footerback">
-        <span id="footer2">SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’
+        <span>SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’
             <br>2024ⓒSeoul National University of Science and Technology. All Rights Reserved.</span>
         <div class="logo_footer">
-            <img style="margin-right: 8px;" src="resource/logo_tech.svg">
-            <img style="height: 60px;" src="resource/logo_footer.svg">
+            <img style="margin-right: 16px;" src="../resource/logo_tech.svg">
+            <img style="height: 60px;" src="../resource/logo_footer.svg">
         </div>
     </footer>
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="logo-svg">
@@ -50,7 +283,235 @@
             </clipPath>
         </defs>
         </svg> -->
-    <script src='main.js' type="text/javascript"></script>
+    <script>
+        let constrain = 50;
+let mouseOverContainer = document.getElementById("ex1");
+let ex1Layer = document.getElementById("ex1-layer");
+
+function transforms(x, y, el) {
+    let box = el.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / constrain;
+    let calcY = (x - box.x - (box.width / 2)) / constrain;
+
+    return "perspective(10000px) "
+        + "   rotateX(" + calcX + "deg) "
+        + "   rotateY(" + calcY + "deg) ";
+}
+
+function transformElement(el, xyEl) {
+    el.style.transform = transforms.apply(null, xyEl);
+}
+
+mouseOverContainer.onmousemove = function (e) {
+    let xy = [e.clientX, e.clientY];
+    let position = xy.concat([ex1Layer]);
+
+    window.requestAnimationFrame(function () {
+        transformElement(ex1Layer, position);
+    });
+};
+
+//-------------나브------------//
+const about = document.getElementById('about');
+const project = document.getElementById('project');
+const designer = document.getElementById('designer');
+const archive = document.getElementById('archive');
+
+about.addEventListener('mouseenter', () => {
+    about.textContent = '?bo?t,';
+});
+project.addEventListener('mouseenter', () => {
+    project.textContent = 'P?oje?t,';
+});
+designer.addEventListener('mouseenter', () => {
+    designer.textContent = 'D?s?gn?r,';
+});
+archive.addEventListener('mouseenter', () => {
+    archive.textContent = 'A?chi?e.';
+});
+
+about.addEventListener('mouseleave', () => {
+    about.textContent = 'About,';
+});
+project.addEventListener('mouseleave', () => {
+    project.textContent = 'Project,';
+});
+designer.addEventListener('mouseleave', () => {
+    designer.textContent = 'Designer,';
+});
+archive.addEventListener('mouseleave', () => {
+    archive.textContent = 'Archive.';
+});
+
+//------------------------화살표 누르면 사람과 배경이 바뀌게------------------//
+let main_pp = document.getElementById("main_p1");
+let track_pp = ["../resource/pp_ux.gif", "../resource/pp_cx.gif", "../resource/pp_ed.gif", "../resource/pp_il.gif", "../resource/pp_id.gif", "../resource/pp_vd.gif"];
+let main_bg = document.getElementById("main_b1");
+let track_bg = ["../resource/bg_ux.gif", "../resource/bg_cx.gif", "../resource/bg_ed.gif", "../resource/bg_il.gif", "../resource/bg_id.gif", "../resource/bg_vd.gif"];
+
+let i = 0;
+let currentPage = 'UX';  // 기본 페이지를 UX로 설정
+
+function left() {
+    if (i > 0) {
+        i--;
+    } else {
+        i = 5; 
+    }
+    updateMainContent();
+}
+
+function right() {
+    if (i < 5) {
+        i++;
+    } else {
+        i = 0; 
+    }
+    updateMainContent();
+}
+
+function updateMainContent() {
+    main_pp.src = track_pp[i];
+    main_bg.src = track_bg[i];
+
+    // 현재 페이지 업데이트
+    if (i === 0) {
+        currentPage = 'UX';
+    } else if (i === 1) {
+        currentPage = 'CX';
+    } else if (i === 2) {
+        currentPage = 'ED';
+    } else if (i === 3) {
+        currentPage = 'IL';
+    } else if (i === 4) {
+        currentPage = 'ID';
+    } else if (i === 5) {
+        currentPage = 'VD';
+    }
+
+    console.log(`Current Page: ${currentPage}`);  // 현재 페이지 출력
+}
+
+//------------------------프롬프트 자동생성----------------------------//
+let usedPrompts = [];  // 이미 사용된 prompt들을 저장할 배열
+
+function getPromptPath(page) {
+    // Define the available prompt files for each page
+    const promptFiles = {
+        CX: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15"],
+        UX: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15", "e16", "e17"],
+        ID: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15", "e16", "e17", "e18"],
+        ED: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11"],
+        VD: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15"],
+        IL: ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14", "e15", "e16"]
+    };
+
+    let selectedFiles = promptFiles[page] || []; // Get the prompts for the specified page
+    return selectedFiles.map(file => ({
+        path: `../resource/prompt/${page}/${file}.svg`,
+        file: file
+    }));
+}
+
+function getRandomFile() {
+    let availablePrompts = getPromptPath(currentPage).filter((prompt) => !usedPrompts.includes(prompt.file));
+
+    // 모든 프롬프트가 사용되었다면 초기화
+    if (availablePrompts.length === 0) {
+        usedPrompts = [];
+        availablePrompts = getPromptPath(currentPage);
+    }
+
+    let ranfile = availablePrompts[Math.floor(Math.random() * availablePrompts.length)];
+    usedPrompts.push(ranfile.file);  // 사용한 프롬프트 추가
+    return ranfile.path;  // 경로 반환
+}
+
+function ranProm(delay) {
+    setTimeout(() => {
+        const promptCX = getRandomFile();
+        const zone = document.querySelector('.zone');
+
+        if (zone) {
+            var a = document.createElement("img");
+            a.className = "prompt";
+            a.src = promptCX;
+
+            var ranX = Math.random() * zone.clientWidth;
+            var ranY = Math.random() * zone.clientHeight;
+
+            a.style.position = "absolute";
+            a.style.left = ranX + "px";
+            a.style.top = ranY + "px";
+
+            zone.appendChild(a);
+
+            const visibleDuration = 5000;
+            const hiddenDuration = 1000;
+
+            setTimeout(() => {
+                zone.removeChild(a);
+                setTimeout(() => {
+                    ranProm(0);
+                }, hiddenDuration);
+            }, visibleDuration);
+        } else {
+            console.error('Zone element not found');
+        }
+
+    }, delay);
+}
+
+function startPromSequence() {
+    const numberOfElements = 6;  // 생성할 요소의 개수
+    const delayBetweenElements = 1000;  // 각 요소가 생성될 때까지의 시간 차이 (밀리초)
+
+    for (let i = 0; i < numberOfElements; i++) {
+        ranProm(i * delayBetweenElements);
+    }
+}
+
+// 자동 전환 기능 추가
+let autoTransition; // 자동 전환을 위한 변수
+let autoTransitionDelay = 8000; // 8초
+
+function startAutoTransition() {
+    autoTransition = setInterval(() => {
+        right(); // 오른쪽 화살표 클릭을 시뮬레이트
+    }, autoTransitionDelay);
+}
+
+function stopAutoTransition() {
+    clearInterval(autoTransition);
+}
+
+// 화살표 클릭 시 자동 전환 멈춤
+document.getElementById("arrow_left").addEventListener('click', stopAutoTransition);
+document.getElementById("arrow_right").addEventListener('click', stopAutoTransition);
+
+// 페이지가 처음 로드될 때 자동 전환 시작
+startAutoTransition();
+
+// 시작 함수 호출
+startPromSequence();
+
+
+function updateTextForMobile() {
+    // 모바일인지 확인 (화면 너비 기준)
+    if (window.innerWidth <= 768) {
+      document.getElementById("footer2").innerText = "SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’ 2024ⓒSeoul National University of Science and Technology. All Rights Reserved.";
+    } else { 
+      document.getElementById("footer2").innerText = "SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’ \n 2024ⓒSeoul National University of Science and Technology. All Rights Reserved.";
+    }
+  }
+  
+  // 페이지 로드 시 실행
+  updateTextForMobile();
+  
+  // 화면 크기 변경 시에도 실행
+  window.addEventListener("resize", updateTextForMobile);
+    </script>
 </body>
 
 </html>
+
